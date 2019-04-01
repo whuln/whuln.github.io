@@ -10,12 +10,23 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="">
+		<script
+		  src="https://code.jquery.com/jquery-3.3.1.js"
+		  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+		  crossorigin="anonymous"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <div>李宁的博客</div>
-        <script src="" async defer></script>
+        <script>
+			$(function(){
+				alert("test");
+				$.get("https://www.easy-mock.com/mock/5ca1c78fa3235b4784294c20/leening/test",function(data,status){
+					alert("Data: " + data.data.test + "nStatus: " + status);
+				});
+			})
+		</script>
     </body>
 </html>
